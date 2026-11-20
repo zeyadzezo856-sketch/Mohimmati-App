@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --surface: #f9f9ff;
+    --surface-elevated: #ffffff;
+    --surface-subdued: #f1f3f7;
+    --primary: #1e3a5f;
+    --primary-deep: #022448;
+    --text-primary: #191c22;
+    --text-secondary: #535d6c;
+    --border-subtle: #e2e6ed;
+    --danger: #c23434;
+    --success: #1e7e52;
+    --info: #2e7278;
+    --warning: #d97706;
+  }
+
+  html {
+    direction: rtl;
+    font-family: 'IBM Plex Sans Arabic', 'IBM Plex Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: var(--surface);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 0;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--surface);
+    color: var(--text-primary);
+    line-height: 1.65;
+    letter-spacing: 0;
+  }
+
+  h1, h2, h3, h4, p, span, button, input, textarea, select, label {
+    letter-spacing: 0;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
